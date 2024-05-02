@@ -1,7 +1,9 @@
+import Frontpage from "./pages/frontpage/Frontpage"
+
 function App() {
-  
+
   return (
-      <h1>React App</h1>
+      <Frontpage />
   )
 }
 

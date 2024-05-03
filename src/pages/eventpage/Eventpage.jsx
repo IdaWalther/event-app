@@ -1,8 +1,12 @@
+import Searchbar from '../../components/searchbar/Searchbar';
+import './eventpage.css';
+
 function Eventpage() {
     return (
-        <>
-            <h1>Eventpage</h1>
-        </>
+        <div className="eventpage">
+            <h1 className="eventpageHeader">Events</h1>
+            <Searchbar />
+        </div>
     )
 }
 

@@ -1,0 +1,18 @@
+.eventpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--purpleColor);
+    min-height: 100vh;
+}
+
+.eventpageHeader {
+    color: var(--pinkColor);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Sansita One', sans-serif;
+    line-height: 37.28px;
+    margin: 4rem 0 2rem 0;
+}

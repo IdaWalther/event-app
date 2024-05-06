@@ -4,9 +4,10 @@
 
 .magnifyingGlass {
     position: absolute;
-    top: 13px;
-    left: 10px;
+    top: 32%;
+    left: 3.5%;
     color: rgba(255, 255, 255, .1);
+    font-size: .9rem;
 }
 .searchBar {
     min-width: 310px; 

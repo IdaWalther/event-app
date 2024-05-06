@@ -1,5 +1,5 @@
 import axios from "axios";
-import useTicketStore from "../../../stores/ticket-store";
+import useTicketStore from "../../stores/ticket-store";
 import { useEffect } from "react";
 import './eventbox.css';
 

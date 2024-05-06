@@ -1,5 +1,5 @@
 import Searchbar from '../../components/searchbar/Searchbar';
-import Eventbox from '../../components/searchbar/eventbox/Eventbox';
+import Eventbox from '../../components/eventbox/Eventbox';
 import './eventpage.css';
 
 function Eventpage() {

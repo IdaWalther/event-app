@@ -1,4 +1,5 @@
 import Searchbar from '../../components/searchbar/Searchbar';
+import Eventbox from '../../components/searchbar/eventbox/Eventbox';
 import './eventpage.css';
 
 function Eventpage() {
@@ -6,6 +7,7 @@ function Eventpage() {
         <div className="eventpage">
             <h1 className="eventpageHeader">Events</h1>
             <Searchbar />
+            <Eventbox />
         </div>
     )
 }

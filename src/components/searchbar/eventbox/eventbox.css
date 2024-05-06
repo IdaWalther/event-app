@@ -1,0 +1,78 @@
+.event {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 1.5rem;
+} 
+.eventDate {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    word-break: break-word;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.date {
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+.month {
+    font-size: 10px;
+    line-height: 12px;
+}
+.eventInformation {
+    display: flex;
+    flex-direction: row;
+    flex: 4;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.eventInfo {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.eventSubtitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 22px;
+    line-height: 26.4px;
+    color: #ffffff;
+    text-shadow: 1px 1px var(--pinkColor);
+}
+
+.paragraphWhere {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 14.4px;
+    color: #ffffff;
+}
+
+.paragraphWhen {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #D0D0D0;
+    padding-bottom: .45rem;
+}
+
+.eventPrice {
+    color: var(--greenColor);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 17px;
+    line-height: 20.4px;
+    text-align: right;
+    align-self: flex-end;
+}

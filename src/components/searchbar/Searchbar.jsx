@@ -5,8 +5,8 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 function Searchbar() {
     return (
         <section className="searchbarContainer">
-             <FontAwesomeIcon icon={faMagnifyingGlass} className="magnifyingGlass" />
-            <input className="searchBar" type="text" placeholder="" />
+                <FontAwesomeIcon icon={faMagnifyingGlass} className="magnifyingGlass" />
+                <input className="searchBar" type="text" placeholder="" />
         </section>
     )
 }

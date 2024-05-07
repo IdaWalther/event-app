@@ -2,7 +2,7 @@ import './eventinfopage.css'
 
 function Eventinfopage() {
   return (
-    <article className="eventInfoPage">
+    <section className="eventInfoPage">
       <section className="topSection">
         <h1 className="eventInfoPageTitle">Event</h1>
         <p className="paragraphScoreTickets">You are about to score some tickets to</p>
@@ -33,7 +33,7 @@ function Eventinfopage() {
       <section className="bottomSection">
         <button className="buttonBuyTickets">Buy Tickets</button>
       </section>
-    </article>
+    </section>
   )
 }
 

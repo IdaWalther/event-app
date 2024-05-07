@@ -15,6 +15,7 @@
     font-family: 'Sansita One', sans-serif;
     line-height: 37.28px;
     margin: 4rem 0 2rem 0;
+    font-weight: 400;
 }
 
 .paragraphScoreTickets {
@@ -46,6 +47,7 @@
     line-height: 22.8px;
     font-weight: 500;
     text-align: center;
+    
 }
 
 .eventInfoPageEventInfoLocation {

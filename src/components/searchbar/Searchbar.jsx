@@ -6,7 +6,7 @@ function Searchbar() {
     return (
         <section className="searchbarContainer">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="magnifyingGlass" />
-                <input className="searchBar" type="text" placeholder="" />
+                <input aria-label="search bar" className="searchBar" type="text" placeholder="" />
         </section>
     )
 }

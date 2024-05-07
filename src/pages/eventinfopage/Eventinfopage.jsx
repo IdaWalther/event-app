@@ -18,7 +18,7 @@ function Eventinfopage() {
         <section className="addTicketsPrice">
           <p className="eventInfoPrice">1000 sek</p>
         </section>
-
+        
         <section className="buttonSubtractContainer">
           <button className="buttonSubtract">-</button>
         </section>

@@ -10,8 +10,11 @@ function Nav() {
                 <NavLink to="/events" className="navigationLink" activeClassName="active">
                     Events
                 </NavLink>
-                <NavLink to="/eventinfo" className="navigationLink" activeClassName="active">
-                    Event Info
+                <NavLink to="/order" className="navigationLink" activeClassName="active">
+                    Order
+                </NavLink>
+                <NavLink to="/tickets" className="navigationLink" activeClassName="active">
+                    Tickets
                 </NavLink>
         </nav>
     )

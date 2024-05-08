@@ -1,8 +1,11 @@
+import Ticket from '../../components/ticket/Ticket'
+import './ticketpage.css'
+
 function Ticketpage() {
     return (
-        <div>
-            <h1>Ticketpage</h1>
-        </div>
+        <section className="ticketpage">
+            <Ticket />
+        </section>
     )
 }
 

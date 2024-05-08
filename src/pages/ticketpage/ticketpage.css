@@ -1,0 +1,24 @@
+.ticketpage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    max-width: 500px;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        180deg,
+        hsl(340deg 87% 69%) 0%,
+        hsl(327deg 89% 67%) 8%,
+        hsl(315deg 92% 65%) 15%,
+        hsl(302deg 95% 64%) 21%,
+        hsl(290deg 97% 62%) 27%,
+        hsl(277deg 99% 60%) 33%,
+        hsl(271deg 86% 52%) 38%,
+        hsl(265deg 74% 44%) 43%,
+        hsl(259deg 61% 35%) 50%,
+        hsl(253deg 48% 27%) 65%,
+        hsl(247deg 36% 19%) 100%
+    );
+    text-align: center;
+}

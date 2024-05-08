@@ -4,7 +4,7 @@
     gap: 1rem;
     justify-content: space-between;
     justify-items: center;
-    margin: 1.5rem;
+    margin: 1.5rem 2rem;
 } 
 .eventDate {
     font-family: 'Fira Sans', sans-serif;

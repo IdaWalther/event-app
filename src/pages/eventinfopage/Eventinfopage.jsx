@@ -24,23 +24,18 @@ function Eventinfopage() {
         console.log('Error fetching events:', error)
       })
   }, [setEvents, setIsFetching])
-  console.log(id);
-  console.log(events)
-  console.log(events[0])
-  console.log(typeof events[0])
+
   if (isFetching) {
     return <h1 className="loading">Loading...</h1>;
   }
   const event = events.find(event => event.id === id)
-  console.log(event);
-
 
   if (!event) {
       return <p>No event data available.</p>;
     }
 
   return (
-        <section className="eventInfoPage">
+      <article className="eventInfoPage">
         <section className="topSection">
           <h1 className="eventInfoPageTitle">Events</h1>
           <p className="paragraphScoreTickets">You are about to score some tickets to</p>
@@ -71,7 +66,7 @@ function Eventinfopage() {
         <section className="bottomSection">
           <button className="buttonBuyTickets">Buy Tickets</button>
         </section>
-      </section>
+      </article>
   )
 }
 

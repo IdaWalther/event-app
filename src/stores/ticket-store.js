@@ -5,6 +5,17 @@ const useTicketStore = create((set) => ({
     isFetching: true,
     setEvents: (newEvents) => set({ events: newEvents }),
     setIsFetching: (newIsFetching) => set({ isFetching: newIsFetching }),
+
+    eventTickets: {},
+    updateTickets: (eventId, ticketCount, ticketPrice) => set((state) => ({
+        eventTickets: {
+            ...state.eventTickets,
+            [eventId]: {
+                ticketCount,
+                totalCost: ticketCount * ticketPrice
+            }
+        }
+    }))
 }));
 
 export default useTicketStore;

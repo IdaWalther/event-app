@@ -1,4 +1,5 @@
 import Addevent from '../../components/addevent/Addevent'
+import Nav from '../../components/nav/Nav'
 import './orderpage.css'
 
 function Orderpage() {

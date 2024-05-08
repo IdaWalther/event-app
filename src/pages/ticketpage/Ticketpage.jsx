@@ -4,7 +4,8 @@ import './ticketpage.css'
 function Ticketpage() {
     return (
         <section className="ticketpage">
-            <Ticket />
+                <Ticket />
+                <Ticket />
         </section>
     )
 }

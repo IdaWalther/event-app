@@ -71,7 +71,7 @@
     padding: 1rem;
 }
 
-.date, .fromTime, .toTime {
+.ticketDate, .fromTime, .toTime {
     font-family: 'Fira Sans', sans-serif;
     font-size: 18px;
     line-height: 21.6px;

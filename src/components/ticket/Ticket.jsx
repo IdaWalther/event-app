@@ -13,7 +13,7 @@ function Ticket() {
             </section>
                 <section className="sectionWhen">
                     <p className="when">When</p>
-                    <p className="date">Date</p>
+                    <p className="ticketDate">Date</p>
                 </section>
                 <section className="sectionFrom">
                     <p className="from">From</p>

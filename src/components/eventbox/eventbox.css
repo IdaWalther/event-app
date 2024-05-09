@@ -76,3 +76,7 @@
     text-align: right;
     align-self: flex-end;
 }
+
+.eventContainer a {
+    text-decoration: none;
+}

@@ -1,39 +1,50 @@
 import './eventinfopage.css'
+import { useParams } from 'react-router-dom'
+import useTicketStore from '../../stores/ticket-store'
+import { useEffect } from 'react'
+import Eventdetailstopsection from '../../components/eventdetails/Eventdetailstopsection'
+import Eventdetailstopmiddlesection from '../../components/eventdetails/Eventdetailstopmiddlesection'
+import Eventdetailsaddticket from '../../components/eventdetails/Eventdetailsaddticket'
+import Eventdetailsbuyticketbutton from '../../components/eventdetails/Eventdetailsbuyticketbutton'
 
 function Eventinfopage() {
+  const { id } = useParams()
+  const { events, isFetching, setEvents, setIsFetching }  = useTicketStore(state => ({
+    events: state.events,
+    isFetching: state.isFetching,
+    setEvents: state.setEvents,
+    setIsFetching: state.setIsFetching
+  }))
+
+  useEffect(() => {
+    setIsFetching(true);
+      fetch('https://santosnr6.github.io/Data/events.json')
+      .then(response => response.json())
+      .then(data => {
+        setEvents(data.events)
+        setIsFetching(false)
+      })
+      .catch(error => {
+        console.log('Error fetching events:', error)
+      })
+  }, [setEvents, setIsFetching])
+
+  if (isFetching) {
+    return <h1 className="loading">Loading...</h1>;
+  }
+  const event = events.find(event => event.id === id)
+
+  if (!event) {
+      return <p className="loading">No event data available.</p>;
+    }
+
   return (
-    <section className="eventInfoPage">
-      <section className="topSection">
-        <h1 className="eventInfoPageTitle">Event</h1>
-        <p className="paragraphScoreTickets">You are about to score some tickets to</p>
-      </section>
-
-      <section className="topMiddleSection">
-        <h2 className="eventInfoPageHeader">TIAda</h2>
-        <p className="paragraphEventInfoDate">Datum</p>
-        <p className="eventInfoPageEventInfoLocation">The Event Location</p>
-      </section>
-
-      <section className="addTicketsContainer">
-        <section className="addTicketsPrice">
-          <p className="eventInfoPrice">1000 sek</p>
-        </section>
-        
-        <section className="buttonSubtractContainer">
-          <button className="buttonSubtract">-</button>
-        </section>
-        <section className="eventInfoTicketContainer">
-          <p className="ticketCounter">1</p>
-        </section>
-        <section className="buttonAddContainer">
-          <button className="buttonAdd">+</button>
-        </section>
-      </section>
-
-      <section className="bottomSection">
-        <button className="buttonBuyTickets">Buy Tickets</button>
-      </section>
-    </section>
+      <article className="eventInfoPage">
+        <Eventdetailstopsection />
+        <Eventdetailstopmiddlesection event={event} />
+        <Eventdetailsaddticket event={event} />
+        <Eventdetailsbuyticketbutton eventId={event.id} />
+      </article>
   )
 }
 

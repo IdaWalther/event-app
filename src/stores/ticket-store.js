@@ -25,7 +25,7 @@ const useTicketStore = create((set) => ({
                 totalCost: ticketCount * ticketPrice 
                 }
             ]
-        }))
+        })),
 }));
 
 export default useTicketStore;

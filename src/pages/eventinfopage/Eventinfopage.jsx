@@ -43,7 +43,7 @@ function Eventinfopage() {
         <Eventdetailstopsection />
         <Eventdetailstopmiddlesection event={event} />
         <Eventdetailsaddticket event={event} />
-        <Eventdetailsbuyticketbutton eventId={event.id} />
+        <Eventdetailsbuyticketbutton event={event}/>
       </article>
   )
 }

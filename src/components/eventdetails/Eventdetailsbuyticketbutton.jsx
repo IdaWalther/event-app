@@ -1,14 +1,15 @@
 import './eventdetails.css';
 import useTicketStore from '../../stores/ticket-store';
 
-function Eventdetailsbuyticketbutton({eventId}) {
+function Eventdetailsbuyticketbutton({event}) {
 
-    const { eventTickets, addToCart} = useTicketStore(state => ({ 
+    const { eventTickets, addToCart } = useTicketStore(state => ({ 
         eventTickets: state.eventTickets,
         addToCart: state.addToCart,
     }));
 
-
+    const eventId = event.id;
+    
     const addTicketsToOrder = () => {
         const currentTicketCount = eventTickets[eventId]?.ticketCount || 0;
         const currentTicketPrice = eventTickets[eventId]?.totalCost / currentTicketCount || 0;
@@ -21,7 +22,6 @@ function Eventdetailsbuyticketbutton({eventId}) {
             } else {
             addToCart(eventId, currentTicketCount, currentTicketPrice);
             }
-            console.log('Cart:', eventTickets);
         }
     }
 

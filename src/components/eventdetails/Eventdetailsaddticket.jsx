@@ -1,12 +1,13 @@
 import './eventdetails.css';
 import useTicketStore from '../../stores/ticket-store';
+import { useEffect } from 'react';
 
 function Eventdetailsaddticket({event}) {
 
     let eventId = event.id;
     let ticketPrice = event.price;
 
-    const { eventTickets, updateTickets } = useTicketStore(state => ({ 
+    const { eventTickets, updateTickets} = useTicketStore(state => ({ 
         eventTickets: state.eventTickets,
         updateTickets: state.updateTickets,
     }))
@@ -14,6 +15,9 @@ function Eventdetailsaddticket({event}) {
     const ticketCount = eventTickets[eventId]?.ticketCount || 0;
     const totalCost = eventTickets[eventId]?.totalCost || 0;
 
+    useEffect(() => {
+        updateTickets(eventId, ticketCount, ticketPrice)
+    }, [ticketCount, totalCost])
 
     const handleAddTicket = () => {
         const currentTicketCount = eventTickets[eventId]?.ticketCount || 0;

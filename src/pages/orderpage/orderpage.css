@@ -23,7 +23,7 @@
     margin-top: auto;
 }
 
-.orderpageTotal {
+.orderpageTotal, .orderpageEmpty {
     font-family: 'Fira Sans', sans-serif;
     font-size: 19px;
     font-weight: 400;

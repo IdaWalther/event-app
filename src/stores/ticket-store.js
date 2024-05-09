@@ -15,7 +15,17 @@ const useTicketStore = create((set) => ({
                 totalCost: ticketCount * ticketPrice
             }
         }
-    }))
+    })),
+    cart: [],
+    addToCart: (eventId, ticketCount, ticketPrice) => set((state) => ({
+        cart: [
+            ...state.cart, { 
+                eventId, 
+                ticketCount, 
+                totalCost: ticketCount * ticketPrice 
+                }
+            ]
+        }))
 }));
 
 export default useTicketStore;

@@ -35,7 +35,7 @@ function Eventinfopage() {
   const event = events.find(event => event.id === id)
 
   if (!event) {
-      return <p>No event data available.</p>;
+      return <p className="loading">No event data available.</p>;
     }
 
   return (
@@ -43,7 +43,7 @@ function Eventinfopage() {
         <Eventdetailstopsection />
         <Eventdetailstopmiddlesection event={event} />
         <Eventdetailsaddticket event={event} />
-        <Eventdetailsbuyticketbutton event={event} />
+        <Eventdetailsbuyticketbutton eventId={event.id} />
       </article>
   )
 }

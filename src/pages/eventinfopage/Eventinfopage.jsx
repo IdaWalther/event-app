@@ -2,6 +2,10 @@ import './eventinfopage.css'
 import { useParams } from 'react-router-dom'
 import useTicketStore from '../../stores/ticket-store'
 import { useEffect } from 'react'
+import Eventdetailstopsection from '../../components/eventdetails/Eventdetailstopsection'
+import Eventdetailstopmiddlesection from '../../components/eventdetails/Eventdetailstopmiddlesection'
+import Eventdetailsaddticket from '../../components/eventdetails/Eventdetailsaddticket'
+import Eventdetailsbuyticketbutton from '../../components/eventdetails/Eventdetailsbuyticketbutton'
 
 function Eventinfopage() {
   const { id } = useParams()
@@ -36,36 +40,10 @@ function Eventinfopage() {
 
   return (
       <article className="eventInfoPage">
-        <section className="topSection">
-          <h1 className="eventInfoPageTitle">Events</h1>
-          <p className="paragraphScoreTickets">You are about to score some tickets to</p>
-        </section>
-
-        <section className="topMiddleSection">
-          <h2 className="eventInfoPageHeader">{event.name}</h2>
-          <p className="paragraphEventInfoDate">{event.when.date} kl {event.when.from} - {event.when.to} </p>
-          <p className="eventInfoPageEventInfoLocation">{event.where}</p>
-        </section>
-
-        <section className="addTicketsContainer">
-          <section className="addTicketsPrice">
-            <p className="eventInfoPrice">{event.price}</p>
-          </section>
-          
-          <section className="buttonSubtractContainer">
-            <button className="buttonSubtract">-</button>
-          </section>
-          <section className="eventInfoTicketContainer">
-            <p className="ticketCounter">1</p>
-          </section>
-          <section className="buttonAddContainer">
-            <button className="buttonAdd">+</button>
-          </section>
-        </section>
-
-        <section className="bottomSection">
-          <button className="buttonBuyTickets">Buy Tickets</button>
-        </section>
+        <Eventdetailstopsection />
+        <Eventdetailstopmiddlesection event={event} />
+        <Eventdetailsaddticket event={event} />
+        <Eventdetailsbuyticketbutton event={event} />
       </article>
   )
 }

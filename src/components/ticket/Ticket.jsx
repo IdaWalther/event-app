@@ -1,6 +1,18 @@
 import './ticket.css'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
-function Ticket() {
+function Ticket({order}) {
+
+    const [ticketEvents, setTicketEvents] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://santosnr6.github.io/Data/events.json')
+        .then(response => setTicketEvents(response.data.events))
+        .catch(error => console.error(error))
+    }, [])
+    
+    console.log(order)
     return (
         <article className="ticketContainer">
             <section className="ticketWhat">
@@ -25,7 +37,7 @@ function Ticket() {
                 </section>
             <section className="ticketInformation">
                 <p className="information">Info</p>
-                <p className="ticketSeat">Section c - seat</p>
+                <p className="ticketSeat">{order.section} - {order.seat}</p>
             </section>
             <section className="ticketId">
                 <p className="ticketBarcode">1241B</p>

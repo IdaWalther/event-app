@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { customAlphabet } from 'nanoid';
+import { all } from "axios";
 
 const alpabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nanoid = customAlphabet(alpabet, 5);
@@ -46,28 +47,32 @@ const useTicketStore = create((set) => ({
     })),
     orders: [],
     createOrder: () => set((state) => {
-        let sectionCounter = 0;
-        let seatCounter = 1;
+        const eventSections = new Map();
 
-        const newOrder = state.cart.reduce((acc, ticket) => {
-            for (let i = 0; i < ticket.ticketCount; i++) {
-                if (seatCounter > 100) {
-                    sectionCounter++;
-                    seatCounter = 1;
-                }
-                const sectionLetter = String.fromCharCode(65 + sectionCounter);
+        const newOrder = state.cart.flatMap((ticket) => {
+            const eventKey = ticket.eventId;
+            let section, startSeat;
 
-                acc.push({
-                    ...ticket,
-                    section: `Section ${sectionLetter}`,
-                    seat: `Seat ${seatCounter}`,
-                    barcode: nanoid(),
-                    orderId: nanoid()
-                });
-                seatCounter++;
+            if(!eventSections.has(eventKey)) {
+                section = `Section ${String.fromCharCode(65 + Math.floor(Math.random() * 26))}`;
+                startSeat = Math.floor(Math.random() * 100) + 1;
+                eventSections.set(eventKey, { section, startSeat });
+            } else {
+                const savedData = eventSections.get(eventKey);
+                section = savedData.section;
+                startSeat = savedData.startSeat;
             }
-            return acc;
-        }, [])
+            return Array.from({length: ticket.ticketCount}, (_, index) => {
+                const seat = startSeat + index;
+
+                return {
+                    ...ticket,
+                    section,
+                    seat: `Seat ${seat}`,
+                    orderId: nanoid(),
+                }
+            })
+        })
         return {
             orders: [
                 ...state.orders,

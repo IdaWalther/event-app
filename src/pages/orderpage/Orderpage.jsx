@@ -41,7 +41,7 @@ function Orderpage() {
 
     useEffect(() => {
         console.log('Orders uppdaterades:', orders);
-    }, [orders]); // Dependency array med orders, så denna useEffect körs varje gång orders ändras
+    }, [orders]); 
 
     return (
         <section className="orderpage">

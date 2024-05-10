@@ -3,6 +3,7 @@ import './ticketpage.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import useTicketStore from '../../stores/ticket-store';
 
 function Ticketpage() {
     const settings = {
@@ -18,12 +19,21 @@ function Ticketpage() {
         arrows: true,
     };
 
+    const {orders} = useTicketStore(state => ({
+        orders: state.orders
+    }))
+
     return (
         <section className="ticketpage">
+            {orders.length > 0 ? (
             <Slider {...settings}>
-                <Ticket />
-                <Ticket />
+                {orders.map((order, index) => {
+                    return <Ticket key={index} order={order} />
+                })}
             </Slider>
+            ) : (
+                <h1 className="noTickets">Du har inga biljetter</h1>
+            )}
         </section>
     )
 }

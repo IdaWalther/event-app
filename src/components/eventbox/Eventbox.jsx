@@ -24,7 +24,6 @@ function Eventbox() {
                 console.log('Error fetching events:', error);
             });
         }
-
         getEvents();
     }, []);
 

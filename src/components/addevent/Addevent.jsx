@@ -1,26 +1,46 @@
 import './addevent.css'
 import useTicketStore from '../../stores/ticket-store';
 
-function Addevent({ event}) {
+function Addevent({ event }) {
 
-    const { eventTickets, updateTickets } = useTicketStore(state => ({
+    const { eventTickets, updateTickets, addToCart, removeFromCart, cart } = useTicketStore(state => ({
         eventTickets: state.eventTickets,
         updateTickets: state.updateTickets,
+        addToCart: state.addToCart,
+        removeFromCart: state.removeFromCart,
+        cart: state.cart,
     }))
     const eventId = event.id;
     const currentTicketCount = eventTickets[eventId]?.ticketCount || 0;
 
     const handleAddTicket = () => {
         const currentTicketCount = eventTickets[eventId]?.ticketCount || 0;
-        updateTickets(eventId, currentTicketCount + 1)
+        const newTicketCount = currentTicketCount + 1;
+
+        updateTickets(eventId, newTicketCount)
+
+        const existingCartItem = cart.find(ticket => ticket.eventId === eventId);
+
+        if (existingCartItem) {
+            addToCart(eventId, newTicketCount, event.price)
+        } else {
+            addToCart(eventId, 1, event.price)
+        }
     }
 
     const handleSubtractTicket = () => {
         const currentTicketCount = eventTickets[eventId]?.ticketCount || 0;
         if (currentTicketCount > 0) { 
-            updateTickets(eventId, currentTicketCount - 1)
+            const newTicketCount = currentTicketCount - 1;
+            updateTickets(eventId, newTicketCount)
+            if (newTicketCount === 0) {
+                removeFromCart(eventId)
+            } else {
+                addToCart(eventId, newTicketCount, event.price)
+            }
         }
     }
+
     return (
         <article className="addEventBox">
             <section className="addEventInfo">

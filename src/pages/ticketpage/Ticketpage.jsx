@@ -25,11 +25,15 @@ function Ticketpage() {
 
     return (
         <section className="ticketpage">
+            {orders.length > 0 ? (
             <Slider {...settings}>
                 {orders.map((order, index) => {
                     return <Ticket key={index} order={order} />
                 })}
             </Slider>
+            ) : (
+                <h1 className="noTickets">Du har inga biljetter</h1>
+            )}
         </section>
     )
 }

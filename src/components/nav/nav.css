@@ -28,6 +28,6 @@
 }
 
 .active {
-    background-color: var(--greenColor);
-    color: #ffffff;
+    background-color: #000000;
+    color: var(--pinkColor);
 }

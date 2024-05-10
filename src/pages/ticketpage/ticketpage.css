@@ -36,3 +36,13 @@
     color: #ffffff !important;  
     font-size: 12px !important; 
 }
+
+.noTickets {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 22.8px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}

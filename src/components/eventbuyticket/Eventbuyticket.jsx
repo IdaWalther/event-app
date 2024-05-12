@@ -15,13 +15,7 @@ function Eventbuyticket({event}) {
         const currentTicketPrice = eventTickets[eventId]?.totalCost / currentTicketCount || 0;
         
         if (currentTicketCount > 0) {
-            console.log('Tickets added to order');
-            if (eventTickets[eventId]) {
-                console.log('Event already in cart');
-                addToCart(eventId, currentTicketCount, currentTicketPrice);
-            } else {
             addToCart(eventId, currentTicketCount, currentTicketPrice);
-            }
         }
     }
 

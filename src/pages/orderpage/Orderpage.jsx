@@ -4,10 +4,8 @@ import useTicketStore from '../../stores/ticket-store'
 import { useEffect, useState } from 'react'
 
 function Orderpage() {
-    const { cart, createOrder, orders  } = useTicketStore(state => ({
+    const { cart  } = useTicketStore(state => ({
         cart: state.cart,
-        createOrder: state.createOrder,
-        orders: state.orders
     }))
 
     const [cartEvents, setCartEvents] = useState([]);
@@ -38,10 +36,6 @@ function Orderpage() {
     const sendOrder = () => {
         useTicketStore.getState().createOrder();
     }
-
-    useEffect(() => {
-        console.log('Orders uppdaterades:', orders);
-    }, [orders]); 
 
     return (
         <section className="orderpage">

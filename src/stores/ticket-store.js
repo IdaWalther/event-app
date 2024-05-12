@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { customAlphabet } from 'nanoid';
-import { all } from "axios";
 
 const alpabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nanoid = customAlphabet(alpabet, 5);

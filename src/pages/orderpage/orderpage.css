@@ -1,0 +1,59 @@
+.orderpage {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--purpleColor);
+    min-height: 100vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderpageHeader {
+    color: var(--pinkColor);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Sansita One', sans-serif;
+    line-height: 37.28px;
+    padding: 4rem 0 2rem 0;
+    font-weight: 400;
+}
+
+.placeOrderContainer {
+    margin-top: auto;
+}
+
+.orderpageTotal, .orderpageEmpty {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 22.8px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.orderpageTotalPrice {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px var(--pinkColor);
+    padding: 1rem;
+}
+
+.orderpageButton {
+    width: 310px;
+    height: 60px;
+    border-radius: 3px;
+    background-color: var(--greenColor);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.4px;
+    text-align: center;
+}

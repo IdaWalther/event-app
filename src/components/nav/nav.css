@@ -1,0 +1,33 @@
+.navigation {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--pinkColor);
+    position: fixed;
+    bottom:0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+.navigationLink {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none; 
+    border: none;
+}
+
+.active {
+    background-color: #000000;
+    color: var(--pinkColor);
+}

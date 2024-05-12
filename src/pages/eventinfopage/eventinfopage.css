@@ -1,0 +1,17 @@
+.eventInfoPage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr) );
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--purpleColor);
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

@@ -1,0 +1,25 @@
+.searchbarContainer {
+    position: relative;
+    height:40px;
+}
+
+.magnifyingGlass {
+    position: absolute;
+    top: 13px;
+    left: 45px;
+    color: rgba(255, 255, 255, .1);
+    font-size: .9rem;
+}
+.searchBar {
+    width: calc(100% - 4rem); 
+    height: 40px;
+    border-radius: 3px;
+    padding: 1rem;
+    padding-left: 2rem;
+    background-color: rgba(255, 255, 255, .1);
+    border: none;
+}
+
+input[type="text"] {
+    color: rgba(255, 255, 255);
+}

@@ -1,0 +1,22 @@
+.eventHeaderTitle {
+    color: var(--pinkColor);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Sansita One', sans-serif;
+    line-height: 37.28px;
+    margin: 4rem 0 2rem 0;
+    font-weight: 400;
+}
+
+.paragraphScoreTickets {
+    font-family: 'Fira Sans', sans-serif;
+    padding: .5rem;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22.8px;
+    color:rgba(255,255,255,.8);
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}

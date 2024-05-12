@@ -1,0 +1,37 @@
+.frontPage {
+    max-width: 500px;
+    margin: auto; 
+    background-color: var(--purpleColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.frontPageLogo {
+    max-width: 182px;
+}
+
+.frontpageHeader {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--pinkColor);
+    line-height: 37.28px;
+    text-shadow: 1px 1px 0 black;
+    text-align: center;
+    margin: 1.5rem;
+
+}
+
+.frontpageParagraph {
+    font-family: 'Fira Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26.4px;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 black;
+    text-align: center;
+}

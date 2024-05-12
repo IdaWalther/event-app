@@ -1,7 +1,7 @@
 # Indivuduell Examination Frontendramverk - Where It's @
 
 ## React-slick
-Jag valde att använda mig av react-slick, också ett externt bibliotek när jag skulle skapa min karusell till mina biljetter. Anledningen till att jag använda react-slick är för att den är väldigt enkel att implementera, det går fort och är inte särskilt krångligt. Jag behövde bara inställa react-slick samt slick-carousel samt tillhörande css filer för att väldigt enkelt få tillgång till en karusell.
+Jag valde att använda mig av react-slick, också ett externt bibliotek när jag skulle skapa min karusell till mina biljetter. Anledningen till att jag använda react-slick är för att den är väldigt enkel att implementera, det går fort och är inte särskilt krångligt. Jag behövde bara installera react-slick samt slick-carousel samt tillhörande css filer för att väldigt enkelt få tillgång till en karusell. React-slick använder slick-carousels css för styling.
 
 ## Nanoid
 Jag har valt att använda mig av nanoid, som är ett externt bibliotek. Anledningen till detta är för att nanoid genererar unika slumpmässiga ID:n, vilket är precis vad jag behöver för att kunna generera unika ordernummer. Det som även är bra med nanoid är att jag själv kan anpassa vilka tecken jag vill att ordernumret ska genereras utifrån.

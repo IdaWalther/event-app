@@ -16,7 +16,6 @@ function Eventbox() {
         const getEvents = () => {
             axios.get('https://santosnr6.github.io/Data/events.json')
             .then(response => {
-                console.log(response.data.events);
                 setEvents(response.data.events);
                 setIsFetching(false);
             })

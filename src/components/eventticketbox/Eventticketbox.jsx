@@ -1,8 +1,8 @@
-import './eventdetails.css';
+import './eventticketbox.css';
 import useTicketStore from '../../stores/ticket-store';
 import { useEffect } from 'react';
 
-function Eventdetailsaddticket({event}) {
+function Eventticketbox({event}) {
 
     let eventId = event.id;
     let ticketPrice = event.price;
@@ -68,4 +68,4 @@ function Eventdetailsaddticket({event}) {
     )
 }
 
-export default Eventdetailsaddticket
+export default Eventticketbox

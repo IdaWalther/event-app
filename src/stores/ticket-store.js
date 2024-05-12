@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { customAlphabet } from 'nanoid';
-import { all } from "axios";
 
 const alpabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nanoid = customAlphabet(alpabet, 5);
@@ -80,6 +79,13 @@ const useTicketStore = create((set) => ({
             ],
             cart: []
         }
+    }),
+    resetEventTickets: () => set((state) => {
+        const resetTickets = Object.keys(state.eventTickets).reduce((acc, eventId) => {
+            acc[eventId] = { ...state.eventTickets[eventId], ticketCount: 0, totalCost: 0 };
+            return acc;
+        }, {});
+        return { eventTickets: resetTickets };
     }),
 }));
 

@@ -1,5 +1,14 @@
 # Indivuduell Examination Frontendramverk - Where It's @
 
+## React-slick
+Jag valde att använda mig av react-slick, också ett externt bibliotek när jag skulle skapa min karusell till mina biljetter. Anledningen till att jag använda react-slick är för att den är väldigt enkel att implementera, det går fort och är inte särskilt krångligt. Jag behövde bara inställa react-slick samt slick-carousel samt tillhörande css filer för att väldigt enkelt få tillgång till en karusell.
+
+## Nanoid
+Jag har valt att använda mig av nanoid, som är ett externt bibliotek. Anledningen till detta är för att nanoid genererar unika slumpmässiga ID:n, vilket är precis vad jag behöver för att kunna generera unika ordernummer. Det som även är bra med nanoid är att jag själv kan anpassa vilka tecken jag vill att ordernumret ska genereras utifrån.
+
+## Font Awesome
+Jag valde även att implementera font awesome för att enkelt kunna använda mig av deras ikoner. Dock använde jag i slutänden enbart förstorningsglaset, men nu har jag lärt mig hur man använder font awesome i ett react projekt.  
+
 ## Uppdrag
 Ditt uppdrag är att koda ihop en frontend till biljettjänsten *Where its @*. Den ska se ut enligt nedan mockup. Du har också tillgång till [Figma-länk](https://www.figma.com/file/vcgWPPy2q44oZZ2eORL1wB/Where-its-light?node-id=0%3A1) för exportering av assets, färger, kika fonter etc.
 
@@ -20,20 +29,3 @@ Du skall välja ut ytterligare 2 st React Hooks, alt. 2 st externa bibliotek (el
 - Appen skall se bra ut på alla skärmstorlekar mellan 375px - 500px
 - Sidan får aldrig krascha
 - När en beställing gjorts skall en biljett skapas där ni genererar fram ett biljettID på 5 tecken (endast STORA BOKSTÄVER och siffror tillåtna), en Sektion och en sittplats. Vid köp av flera biljetter till ett och samma evenemang skall Sektionen vara samma på alla biljetter, och sittplatserna skall vara bredvid varandra.
-
-## Övrig info
-Figma-skissen ger inte en fullständig överblick över hur projektet bör byggas. [Se tillhörande introduktionsfilm](https://vimeo.com/manage/videos/940396692/46ea16e4b9) där det förklaras vilka tolkningar ni kan få lov att göra.
-
-## Resurser
-- Figma-skissen [hittar ni här](https://www.figma.com/file/vcgWPPy2q44oZZ2eORL1wB/Where-its-light?node-id=0%3A1)
-
-- Ett av typsnitten som används i skissen, Sansita One, [hittar ni här](https://www.1001fonts.com/sansita-one-font.html)
-
-- Som vanligt har ni tillgång till datan i mitt API genom nedanstående anrop:
-
-```
-GET https://santosnr6.github.io/Data/events.json
-```
-
-## Inlämning
-Inlämning sker som vanligt i form av att en länk till ditt gitrepo laddas up på Azomo, senast kl 23:59 den 12/5.

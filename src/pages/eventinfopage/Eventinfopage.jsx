@@ -2,10 +2,10 @@ import './eventinfopage.css'
 import { useParams } from 'react-router-dom'
 import useTicketStore from '../../stores/ticket-store'
 import { useEffect } from 'react'
-import Eventdetailstopsection from '../../components/eventdetails/Eventdetailstopsection'
-import Eventdetailstopmiddlesection from '../../components/eventdetails/Eventdetailstopmiddlesection'
-import Eventdetailsaddticket from '../../components/eventdetails/Eventdetailsaddticket'
-import Eventdetailsbuyticketbutton from '../../components/eventdetails/Eventdetailsbuyticketbutton'
+import Eventheader from '../../components/eventheader/Eventheader'
+import Eventdetails from '../../components/eventdetails/Eventdetails'
+import Eventbuyticket from '../../components/eventbuyticket/Eventbuyticket'
+import Eventticketbox from '../../components/eventticketbox/Eventticketbox'
 
 function Eventinfopage() {
   const { id } = useParams()
@@ -40,10 +40,10 @@ function Eventinfopage() {
 
   return (
       <article className="eventInfoPage">
-        <Eventdetailstopsection />
-        <Eventdetailstopmiddlesection event={event} />
-        <Eventdetailsaddticket event={event} />
-        <Eventdetailsbuyticketbutton event={event}/>
+        <Eventheader />
+        <Eventdetails event={event} />
+        <Eventticketbox event={event} />
+        <Eventbuyticket event={event}/>
       </article>
   )
 }

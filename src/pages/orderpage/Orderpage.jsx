@@ -35,6 +35,7 @@ function Orderpage() {
 
     const sendOrder = () => {
         useTicketStore.getState().createOrder();
+        useTicketStore.getState().resetEventTickets();
     }
 
     return (

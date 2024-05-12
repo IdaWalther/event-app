@@ -80,6 +80,13 @@ const useTicketStore = create((set) => ({
             cart: []
         }
     }),
+    resetEventTickets: () => set((state) => {
+        const resetTickets = Object.keys(state.eventTickets).reduce((acc, eventId) => {
+            acc[eventId] = { ...state.eventTickets[eventId], ticketCount: 0, totalCost: 0 };
+            return acc;
+        }, {});
+        return { eventTickets: resetTickets };
+    }),
 }));
 
 export default useTicketStore;
